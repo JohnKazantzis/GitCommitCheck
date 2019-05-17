@@ -9,16 +9,17 @@ do
 	cd "$x"
 
 	#Checking if any changes are not yet commited
-	if [ "$( git status | grep 'up-to-date' )"  == "" ]; then
+	if [ "$( git status | grep 'nothing to commit' )"  == "" ]; then
 		echo "$x"
 
-		read -p "Do you want to commit the changes? Press Y/y to commit): " UPDATEFLAG
+		read -p "Do you want to commit the changes? Press Y/y to commit: " UPDATEFLAG
 
 		if [ "$UPDATEFLAG" == "y" ] || [ "$UPDATEFLAG" == "Y" ]; then
 			echo "$UPDATEFLAG"
 
 			#Reading the commit message
-			read -p "Please enter the commit message: " $CMESSAGE
+			read -p "Please enter the commit message: " CMESSAGE
+			#echo "$CMESSAGE"
 			bash gitPushAll.sh "$CMESSAGE"
 		fi
 		echo ""
