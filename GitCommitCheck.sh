@@ -17,9 +17,8 @@ do
 		if [ "$UPDATEFLAG" == "y" ] || [ "$UPDATEFLAG" == "Y" ]; then
 			echo "$UPDATEFLAG"
 
-			#Reading the commit message
+			#Reading the commit message and running the push script
 			read -p "Please enter the commit message: " CMESSAGE
-			#echo "$CMESSAGE"
 			bash gitPushAll.sh "$CMESSAGE"
 		fi
 		echo ""
