@@ -1,0 +1,10 @@
+#Config file usage:
+#
+#To enable copy mode -> copy-mode = 1
+#To disable copy mode -> copy-mode = 0
+#
+#In copy mode if you choose to commit the changes
+#the script copies the gitPushAll.sh into the folder
+#in order to complete the procedure and then removes it
+
+copy_mode = 1

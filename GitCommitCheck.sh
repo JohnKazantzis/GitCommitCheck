@@ -19,11 +19,16 @@ do
 
 			#Reading the commit message and running the push script
 			read -p "Please enter the commit message: " CMESSAGE
-			bash gitPushAll.sh "$CMESSAGE"
+
+			#Commiting
+			git add *
+			git commit -m "$CMESSAGE"
+			git push
+
 		fi
 		echo ""
 	fi
 
-		#Cding back to the starting dir
+	#Cding back to the starting dir
 	cd $STARTDIR
 done
