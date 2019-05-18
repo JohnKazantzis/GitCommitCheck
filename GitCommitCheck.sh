@@ -15,7 +15,6 @@ do
 		read -p "Do you want to commit the changes? Press Y/y to commit: " UPDATEFLAG
 
 		if [ "$UPDATEFLAG" == "y" ] || [ "$UPDATEFLAG" == "Y" ]; then
-			echo "$UPDATEFLAG"
 
 			#Reading the commit message and running the push script
 			read -p "Please enter the commit message: " CMESSAGE
